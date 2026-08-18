@@ -1,0 +1,6 @@
+import { logFargusEvent } from "../../../../lib/fargus/events";
+
+export async function GET() {
+  await logFargusEvent("test", "FARGUS test event OK");
+  return Response.json({ ok: true, inserted: true });
+}
